@@ -1,0 +1,317 @@
+/* Header */
+
+.site-header {
+    position:
+        sticky;
+
+    top:
+        0;
+
+    z-index:
+        1000;
+
+    background-color:
+        var(--surface);
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+/* Navbar Container*/
+
+.navbar-container {
+    width:
+        min(
+            var(--container-width),
+            88%
+        );
+
+    min-height:
+        78px;
+
+    margin:
+        0 auto;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        50px;
+}
+
+
+/* Brand*/
+
+.brand {
+    flex-shrink:
+        0;
+
+    color:
+        var(--primary);
+
+    font-size:
+        30px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -1px;
+
+    text-decoration:
+        none;
+}
+
+
+/* Navigation */
+
+.main-nav {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        flex-end;
+
+    gap:
+        26px;
+}
+
+
+/* Nav Links */
+
+.nav-link {
+    position:
+        relative;
+
+    padding:
+        28px 0 25px;
+
+    color:
+        var(--text);
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    text-decoration:
+        none;
+
+    white-space:
+        nowrap;
+
+    transition:
+        color var(--transition);
+}
+
+
+.nav-link::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    bottom:
+        18px;
+
+    width:
+        0;
+
+    height:
+        2px;
+
+    background-color:
+        var(--primary);
+
+    transition:
+        width var(--transition);
+}
+
+
+.nav-link:hover {
+    color:
+        var(--primary);
+}
+
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width:
+        100%;
+}
+
+
+.nav-link.active {
+    color:
+        var(--primary);
+}
+
+
+/* Logout Button */
+
+.nav-logout {
+    padding:
+        9px 15px;
+
+    background-color:
+        transparent;
+
+    color:
+        var(--text);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-sm);
+
+    font-family:
+        inherit;
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    cursor:
+        pointer;
+
+    transition:
+        color var(--transition),
+        border-color var(--transition),
+        background-color var(--transition),
+        transform var(--transition);
+}
+
+
+.nav-logout:hover {
+    color:
+        var(--primary);
+
+    border-color:
+        var(--primary);
+
+    background-color:
+        var(--background);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* Session Loading */
+
+.nav-session-loading {
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+
+    font-weight:
+        500;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar-container {
+        width:
+            92%;
+
+        gap:
+            25px;
+    }
+
+
+    .main-nav {
+        gap:
+            16px;
+    }
+
+
+    .nav-link {
+        font-size:
+            12px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar-container {
+        padding:
+            16px 0;
+
+        min-height:
+            auto;
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            12px;
+    }
+
+
+    .main-nav {
+        width:
+            100%;
+
+        justify-content:
+            flex-start;
+
+        flex-wrap:
+            wrap;
+
+        gap:
+            8px 18px;
+    }
+
+
+    .nav-link {
+        padding:
+            6px 0 9px;
+    }
+
+
+    .nav-link::after {
+        bottom:
+            2px;
+    }
+
+
+    .nav-logout {
+        padding:
+            6px 12px;
+    }
+
+}

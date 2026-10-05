@@ -1,0 +1,85 @@
+.page-loader {
+    min-height:
+        55vh;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+}
+
+
+.page-loader-content {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        16px;
+
+    padding:
+        60px 20px;
+
+    color:
+        var(--muted);
+}
+
+
+.loader-spinner {
+    width:
+        32px;
+
+    height:
+        32px;
+
+    flex-shrink:
+        0;
+
+    border:
+        3px solid var(--border);
+
+    border-top-color:
+        var(--primary);
+
+    border-radius:
+        50%;
+
+    animation:
+        ngaoSpin
+        0.8s linear infinite;
+}
+
+
+.page-loader-content p:last-child {
+    font-size:
+        14px;
+}
+
+
+@keyframes ngaoSpin {
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+@media (
+    prefers-reduced-motion:
+    reduce
+) {
+
+    .loader-spinner {
+        animation-duration:
+            2s;
+    }
+
+}

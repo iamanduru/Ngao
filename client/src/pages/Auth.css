@@ -1,0 +1,435 @@
+/* =========================
+   AUTH PAGE
+========================= */
+
+.auth-page {
+    padding:
+        55px 0 20px;
+}
+
+
+.auth-layout {
+    max-width:
+        920px;
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(280px, 0.65fr);
+
+    gap:
+        30px;
+
+    align-items:
+        start;
+}
+
+
+/* =========================
+   AUTH FORM
+========================= */
+
+.auth-card {
+    background-color:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-md);
+
+    padding:
+        38px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.auth-card h1 {
+    color:
+        var(--navy);
+
+    font-size:
+        32px;
+
+    line-height:
+        1.2;
+
+    margin-bottom:
+        9px;
+}
+
+
+.auth-description {
+    color:
+        var(--muted);
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        30px;
+}
+
+
+/* =========================
+   PASSWORD WRAPPER
+========================= */
+
+.password-wrapper {
+    position:
+        relative;
+}
+
+
+.password-wrapper input {
+    padding-right:
+        75px;
+}
+
+
+.password-toggle {
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    right:
+        12px;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        none;
+
+    border:
+        none;
+
+    color:
+        var(--primary);
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    cursor:
+        pointer;
+}
+
+
+/* =========================
+   PASSWORD NOTE
+========================= */
+
+.password-rules {
+    margin:
+        -8px 0 22px;
+
+    padding:
+        14px;
+
+    background-color:
+        var(--background);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-sm);
+}
+
+
+.password-rules p {
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+
+    margin-bottom:
+        5px;
+}
+
+
+.password-rules ul {
+    padding-left:
+        18px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+}
+
+
+/* =========================
+   AGREEMENT
+========================= */
+
+.auth-agreement {
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        10px;
+
+    margin-bottom:
+        6px;
+
+    cursor:
+        pointer;
+
+    color:
+        var(--text);
+
+    font-size:
+        13px;
+}
+
+
+.auth-agreement input {
+    width:
+        auto;
+
+    margin-top:
+        4px;
+}
+
+
+/* =========================
+   AUTH BUTTON
+========================= */
+
+.auth-submit {
+    width:
+        100%;
+
+    min-height:
+        45px;
+
+    margin-top:
+        10px;
+
+    border:
+        none;
+
+    border-radius:
+        var(--radius-sm);
+
+    background-color:
+        var(--primary);
+
+    color:
+        white;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    transition:
+        background-color var(--transition),
+        transform var(--transition);
+}
+
+
+.auth-submit:hover:not(:disabled) {
+    background-color:
+        var(--primary-dark);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.auth-submit:disabled {
+    cursor:
+        not-allowed;
+
+    opacity:
+        0.65;
+}
+
+
+/* =========================
+   SWITCH LOGIN / REGISTER
+========================= */
+
+.auth-switch {
+    margin-top:
+        22px;
+
+    text-align:
+        center;
+
+    color:
+        var(--muted);
+
+    font-size:
+        13px;
+}
+
+
+.auth-switch a {
+    color:
+        var(--primary);
+
+    text-decoration:
+        none;
+
+    font-weight:
+        600;
+}
+
+
+.auth-switch a:hover {
+    text-decoration:
+        underline;
+}
+
+
+/* =========================
+   SECURITY PANEL
+========================= */
+
+.auth-info {
+    padding:
+        30px;
+
+    background-color:
+        var(--navy);
+
+    color:
+        white;
+
+    border-radius:
+        var(--radius-md);
+}
+
+
+.auth-info h2 {
+    font-size:
+        22px;
+
+    margin-bottom:
+        20px;
+}
+
+
+.auth-info-item {
+    padding:
+        18px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+}
+
+
+.auth-info-item:last-child {
+    border-bottom:
+        none;
+}
+
+
+.auth-info-item h3 {
+    font-size:
+        14px;
+
+    margin-bottom:
+        5px;
+}
+
+
+.auth-info-item p {
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-size:
+        13px;
+}
+
+
+/* =========================
+   STATUS MESSAGE
+========================= */
+
+.auth-success {
+    margin-bottom:
+        18px;
+
+    padding:
+        12px 14px;
+
+    color:
+        var(--success);
+
+    background-color:
+        #edf9f2;
+
+    border:
+        1px solid #bce6cc;
+
+    border-radius:
+        var(--radius-sm);
+
+    font-size:
+        13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .auth-layout {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .auth-card {
+        padding:
+            26px;
+    }
+
+}
+
+.auth-error {
+    margin-bottom: 18px;
+
+    padding: 12px 14px;
+
+    color: var(--danger);
+
+    background-color: #fff0f0;
+
+    border: 1px solid #f2c2c2;
+
+    border-radius:
+        var(--radius-sm);
+
+    font-size: 13px;
+}

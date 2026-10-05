@@ -1,0 +1,177 @@
+.contact-page {
+    padding:
+        45px 0 20px;
+}
+
+
+.contact-intro {
+    max-width:
+        720px;
+
+    margin-bottom:
+        38px;
+}
+
+
+.contact-intro h1 {
+    margin-bottom:
+        12px;
+
+    color:
+        var(--navy);
+
+    font-size:
+        clamp(
+            34px,
+            4vw,
+            48px
+        );
+}
+
+
+.contact-intro > p:last-child {
+    color:
+        var(--muted);
+
+    font-size:
+        16px;
+}
+
+
+.contact-layout {
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(280px, 0.7fr);
+
+    gap:
+        30px;
+
+    align-items:
+        start;
+}
+
+
+.contact-card {
+    padding:
+        35px;
+
+    background-color:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-md);
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.contact-help-panel {
+    padding:
+        30px;
+
+    background-color:
+        var(--navy);
+
+    color:
+        white;
+
+    border-radius:
+        var(--radius-md);
+}
+
+
+.contact-help-panel h2 {
+    margin-bottom:
+        12px;
+
+    font-size:
+        23px;
+}
+
+
+.contact-help-panel > p {
+    margin-bottom:
+        22px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.72
+        );
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+}
+
+
+.contact-safety-note {
+    margin-top:
+        28px;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.15
+        );
+}
+
+
+.contact-safety-note strong {
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+}
+
+
+.contact-safety-note p {
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+    font-size:
+        12px;
+}
+
+
+@media (max-width: 800px) {
+
+    .contact-layout {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-card {
+        padding:
+            24px;
+    }
+
+}
